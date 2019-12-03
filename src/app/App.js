@@ -1,16 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './partials/Header'
+import Main from './Main'
+import Footer from './partials/Footer'
 
 function App() {
-  return
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
+  )
 
-  <>
-    <Header />>
-  </>
+}
 
-
-
-
-  export default App;
+export default App;
