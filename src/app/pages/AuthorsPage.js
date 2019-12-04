@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const Author = (props) => {
+const AuthorsPage = (props) => {
     return <>
 
         <h1>SINGLE POST TITLE</h1>
