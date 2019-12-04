@@ -6,7 +6,7 @@ const AuthorsPage = (props) => {
 
         <h1>SINGLE POST TITLE</h1>
 
-        <p><Link to="/author">Author Name</Link></p >
+        <p><Link to="/authors">Author Name</Link></p >
 
 
 
@@ -14,4 +14,4 @@ const AuthorsPage = (props) => {
 
 }
 
-export default Author;
+export default AuthorsPage;
