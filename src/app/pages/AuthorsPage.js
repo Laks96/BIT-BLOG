@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { FetchAuthors } from '../../services/AuthorService'
 
+import PostCounter from '../components/author/PostCounter'
+
 
 class AuthorsPage extends React.Component {
     constructor(props) {
@@ -12,8 +14,8 @@ class AuthorsPage extends React.Component {
     }
 
     componentDidMount() {
-        FetchAuthors().then(authors => this.setState({ allAuthor: authors }))
 
+        FetchAuthors().then(authors => this.setState({ allAuthor: authors }))
     }
 
     render() {
@@ -26,11 +28,14 @@ class AuthorsPage extends React.Component {
 
         return <>
             <main>
-                <h1 className='homeHeader'>AUTHORS</h1>
+                <h1 className='homeHeader'>AUTHORS ({this.state.allAuthor.length})</h1>
 
                 {this.state.allAuthor.map(author => {
 
-                    return <p className='authorName'><Link to={`/authors/${author.id}`}>{author.name}</Link></p >
+                    return <p className='authorName'><Link to={`/authors/${author.id}`}>{author.name}
+                        <PostCounter authorId={author.id} />
+
+                    </Link></p >
 
 
 

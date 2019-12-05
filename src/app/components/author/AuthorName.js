@@ -16,6 +16,8 @@ class AuthorName extends React.Component {
     componentDidMount() {
         fetchSingleAuthor(this.props.authorId)
             .then(author => this.setState({ author: author }))
+
+        console.log(this.state.author);
     }
 
 
@@ -23,7 +25,7 @@ class AuthorName extends React.Component {
     render() {
 
         if (!this.state.author) {
-            return <h1>loadinggg</h1>
+            return <h1>LOADING</h1>
         }
 
         return <>
